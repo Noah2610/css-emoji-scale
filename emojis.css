@@ -1,0 +1,130 @@
+body {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper > * {
+    margin: 4px;
+}
+
+.emoji {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.emoji > .emoji-eyes {
+    position: absolute;
+    top: 20%;
+    display: flex;
+    width: 60%;
+    height: 33%;
+    justify-content: space-between;
+}
+
+.emoji > .emoji-eyes > div {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.emoji > .emoji-eyes > div::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+    background-color: black;
+    color: black;
+    border-radius: 50%;
+    left: 25%;
+    bottom: 15%;
+}
+
+.emoji > .emoji-mouth {
+    position: absolute;
+    bottom: 20%;
+    width: 40%;
+    height: 6%;
+    background-color: black;
+    border-radius: 16px;
+}
+
+.emoji.value-0 {
+    background-color: #F60203;
+}
+
+.emoji.value-0 > .emoji-mouth {
+    border-radius: 50%;
+    width: 50%;
+    height: 40%;
+    transform: translateY(60%);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+.emoji.value-1 {
+    background-color: #FA8C00;
+}
+
+.emoji.value-1 > .emoji-mouth {
+    border-radius: 50%;
+    width: 50%;
+    height: 40%;
+    background-color: transparent;
+    border: 4px solid black;
+    box-sizing: border-box;
+    transform: translateY(60%);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+.emoji.value-2 {
+    background-color: #FCDB07;
+}
+
+.emoji.value-3 {
+    background-color: #B0E303;
+}
+
+.emoji.value-3 > .emoji-mouth {
+    border-radius: 50%;
+    width: 50%;
+    height: 40%;
+    background-color: transparent;
+    border: 4px solid black;
+    box-sizing: border-box;
+    transform: translateY(20%);
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+.emoji.value-4 {
+    background-color: #00D914;
+}
+
+.emoji.value-4 > .emoji-mouth {
+    border-radius: 50%;
+    width: 50%;
+    height: 40%;
+    transform: translateY(20%);
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
